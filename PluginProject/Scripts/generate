@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -euo pipefail
+pushd "$( cd "$( dirname "$0" )" && pwd )" >/dev/null
+generated_file_input=Resources/GeneratedFile.swift
+generated_file_output="${1}"
+cp "${generated_file_input}" "${generated_file_output}"
+popd >/dev/null
+echo "Generated ${generated_file_output}"
